@@ -505,7 +505,7 @@ function roomQuality(){
         var popup = new Mazemap.Popup({closeOnClick: true, offset: [0, -27]})
                 .setHTML(
                     '<div id="container_buttons">' +
-                    '<p style="font-size: 12px;">&nbsp&nbsp<b>Humidity</b> in this room is not normal &nbsp &nbsp</p>' +
+                    '<p style="font-size: 12px;">&nbsp&nbsp<b>CO2</b> in this room is not normal &nbsp &nbsp</p>' +
                     '<p>&nbsp&nbsp<button class="a_demo_one" onclick = "rtdElementclicked()" target="_blank">Current data</button>&nbsp&nbsp&nbsp'+
                     '<button class="a_demo_one" onclick = "hdElementclicked()">Hstorical data</button></p>' +
                     '</div>'                   
