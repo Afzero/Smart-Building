@@ -35,7 +35,7 @@ html, body{
 
 #indicator {
     border:1px solid #B7B7B8;
-    background: url('Pic/indi.png');
+    background: url('../Pic/indi.png');
     background-size:100% 100%;
     width: 80px;
     height:300px;
@@ -69,7 +69,7 @@ html, body{
 }
 
 #quest {
-    background: url('Pic/Quest.PNG');
+    background: url('../Pic/Quest.PNG');
     background-size:100% 100%;
     width: 15px;
     height:15px;
