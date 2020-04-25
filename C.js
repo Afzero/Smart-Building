@@ -328,11 +328,11 @@ function placePoiMarker(poi){
     var popup = new Mazemap.Popup({closeOnClick: true, offset: [0, -27]})
                 .setHTML(
                     '<div id="container_buttons">' +
-                    '<p style="font-size: 12px;">The environment of this room is normal</p>' +
-                    '<p>&nbsp&nbsp<button class="a_demo_one" onclick="rtdElementclicked_nodata()" target="_blank">Current data</button>&nbsp&nbsp&nbsp'+
-                    '<button class="a_demo_one" onclick="rtdElementclicked_nodata()" target="_blank">Hstorical data</button></p>' +
+                    '<p style="font-size: 15px;">The environment of this room is normal</p>' +
+                    '<p>&nbsp&nbsp<button class="a_demo_one" onclick="rtdElementclicked_nodata()" target="_blank"><b style="font-size: 15px;">Current data</b></button>&nbsp&nbsp&nbsp'+
+                    '<button class="a_demo_one" onclick="rtdElementclicked_nodata()" target="_blank"><b style="font-size: 15px;">Historical data</b></button></p>' +
                     '</div>'
-                    );
+                    ).setMaxWidth('none');
 
     mazeMarker.setPopup(popup);
     mazeMarker.on('click', () => {
@@ -365,7 +365,7 @@ function setBuildingStyle(){
         entity5.description = '',
         indicatorElement.style.display = 'none';
     } else if (selectedStyle === 'energy') {
-        entity1._model._color._value = new Cesium.Color(1.0, 0.8, 0.0, 1); // yellow
+        entity1._model._color._value = new Cesium.Color(0.3, 0.8, 0.7, 1); // yellow
         entity2._model._color._value = new Cesium.Color(1.0, 0.7, 0.0, 1); // orange
         entity3._model._color._value = new Cesium.Color(1.0, 0.4, 0.0, 1);
         entity4._model._color._value = new Cesium.Color(0.0, 0.3, 1.0, 1); // blue
@@ -473,9 +473,9 @@ function addHeatmap(){
         var popup = new Mazemap.Popup({closeOnClick: true, offset: [0, -27]})
                 .setHTML(
                     '<div id="container_buttons">' +
-                    '<b style="font-size: 12px;">This room is overcrowded!</b>'+
+                    '<b style="font-size: 20px;">This room is overcrowded!</b>'+
                     '</div>'
-                    );
+                    ).setMaxWidth('none');
         crowdMarker.setPopup(popup);
         // crowdMarker.on('click', () => {
         //     clearPoiMarker();
@@ -505,11 +505,13 @@ function roomQuality(){
         var popup = new Mazemap.Popup({closeOnClick: true, offset: [0, -27]})
                 .setHTML(
                     '<div id="container_buttons">' +
-                    '<p style="font-size: 12px;">&nbsp&nbsp<b>CO2 level</b> in this room is not normal &nbsp &nbsp</p>' +
-                    '<p>&nbsp&nbsp<button class="a_demo_one" onclick = "rtdElementclicked()" target="_blank">Current data</button>&nbsp&nbsp&nbsp'+
-                    '<button class="a_demo_one" onclick = "hdElementclicked()">Hstorical data</button></p>' +
+                    '<p style="font-size: 15px;">&nbsp&nbspThe <b>CO2 level</b> is too high!<br>&nbsp&nbspConsider the following actions: &nbsp &nbsp</p>' +
+                    '<img src="Pic/Action1.jpg" height=30px width=30px>&nbsp&nbsp<b style="font-size: 15px;">Increase ventilation rate</b><br>'+
+                    '<img src="Pic/Action2.jpg" height=30px width=30px>&nbsp&nbsp<b style="font-size: 15px;">Open windows and/or doors</b>' +
+                    '<p>&nbsp&nbsp<button class="a_demo_one" onclick = "rtdElementclicked()" target="_blank"><b style="font-size: 15px;">Current data</b></button>&nbsp&nbsp&nbsp'+
+                    '<button class="a_demo_one" onclick = "hdElementclicked()"><b style="font-size: 15px;">Historical data</b></button></p>' +
                     '</div>'                   
-                    );
+                    ).setMaxWidth('none');
 
         warningMarker.setPopup(popup);
         warningMarker.on('click', () => {
