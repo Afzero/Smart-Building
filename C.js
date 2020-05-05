@@ -517,6 +517,7 @@ function roomQuality(){
         warningMarker.on('click', () => {
             clearPoiMarker();
             console.log('@ Default mazeMarker got clicked!');
+	    Map.zLevel = 1;
             Map.flyTo({center: warningMarker.getLngLat(), zoom: 19, speed: 0.5});
         });
     }else{
